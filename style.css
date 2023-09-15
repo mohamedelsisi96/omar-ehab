@@ -1,0 +1,862 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    width: 80%;
+    margin: 0 10%;
+}
+.clear{
+    clear: both;
+}
+.first{
+    width: 100%;
+    height: 100vh;
+    /* background-image: url(pic/slider-02.jpg); */
+    background: url("pic/slider-02.jpg") repeat scroll center center / cover;
+
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.first .nav{
+    padding-top: 20px;
+    height: 10%;
+
+}
+.first .nav .head, .first .nav .list{
+   display: inline-block;
+}
+
+.nav .head{
+    color: #ff305b;
+    display: inline-block;
+}
+
+.first .nav .list{
+    width: fit-content;
+    vertical-align: baseline;
+    float: right;
+    display: flex;
+    padding-top: 8px;
+}
+.nav ul li{
+  display:inline-block;
+    list-style: none;
+    padding-left: 10px;
+    
+}
+.nav ul li a:hover{
+    color: #ff305b;
+}
+.nav ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+    transition: all .5s linear;
+}
+.first .txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    color: white;
+    text-align: center;
+}
+.first .txt .one{
+    font-weight: 600;
+    margin: 0 0 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color:#ffffff;
+    font-size: 20px;
+}
+.first .txt .two{
+    font-size: 26px;
+    text-transform: capitalize;
+    color: #fff;
+}
+.first .txt h2{
+font-weight: 600;
+margin: 0 0 10px;
+font-family: 'Source Sans Pro', sans-serif;
+color: #ff305b;
+font-size: 45px;
+text-transform: uppercase;
+padding-bottom: 20px;
+}
+.first .txt .two::after{
+    content: "De |";
+    animation: typing 3s linear infinite;
+}
+@keyframes typing {
+    0%{
+        content: "De |"; 
+    }
+    5%{
+        content: "Dev |"; 
+    }
+    10%{
+        content: "Deve |"; 
+    }
+    15%{
+        content: "Devel |"; 
+    }
+    20%{
+        content: "Develo |"; 
+    }
+    25%{
+        content: "Develop |"; 
+    }
+    30%{
+        content: "Develope |"; 
+    }
+    35%{
+        content: "Developer |"; 
+    }
+    40%{
+        content: "Develop |"; 
+    }
+    45%{
+        content: "Devel |"; 
+    }
+    50%{
+        content: "Dev |"; 
+    }
+    55%{
+        content: "De |"; 
+    }
+    60%{
+        content: "Desi |"; 
+    }
+    65%{
+        content: "Design |"; 
+    }
+   70%{
+        content: "Designer |"; 
+    }
+    75%{
+        content: "Designe |"; 
+    }
+    80%{
+        content: "Design |"; 
+    }
+    85%{
+        content: "Desig |"; 
+    }
+    90%{
+        content: "Desi |"; 
+    }
+    95%{
+        content: "Des |"; 
+    }
+    100%{
+        content: "De |"; 
+    }
+    
+}
+/* end first page */
+/* start hello page */
+.hello{
+    width: 100%;
+   
+    padding: 100px 0;
+    display: block;
+ height: auto;
+}
+.hello .master{
+    width: 50%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 70px;
+
+    float: left;
+}
+.hello .master .pic {
+    display: block;
+    width: 100%;
+    height: 100%;
+  
+    position: relative;
+   
+    bottom: 10px;
+ 
+}
+.hello .container{
+    width: 80%;
+    margin-inline: auto;
+    overflow: hidden;
+}
+@media screen and (min-width:769px) and (max-width:992px){
+    .hello .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .hello .master , .hello .hellotxt{
+        float: left;
+        width: 50%;
+        padding-inline: 20px;
+    }
+}
+@media screen and (max-width:768px){
+    .hello .container{
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        height: fit-content;
+        text-align: center;
+    }
+    .hello .master {
+        display: block;
+        width: 500px;
+        margin-inline: 100px;
+    } 
+    .hello .hellotxt{
+        display: block;
+        width: 500px;
+       margin-inline: 100px;
+       
+     
+    }
+}
+.hello .pic img{
+    width: 100%;
+    height: 500px;
+    border-radius: 5px;
+}
+.hello .master .pic::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 5px solid;
+    color: #555555;
+    top:-30px;
+    left: -30px;
+    border-radius: 5px;
+    z-index: -1;
+}
+@media screen and (max-width:992px){
+    .hello .master .pic::after{
+        display: none;
+    }
+    .hello .container{
+        width: 100%;
+        margin: 0;
+    }
+    .hello .master .pic {
+        overflow: hidden;
+    }
+}
+/* @media screen and (max-width:600px){
+    .hello .master , .hello .hellotxt{
+       float: left;
+        width: 100%;
+        margin-block: auto;
+    }
+    
+} */
+
+.hello .pic .link{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    bottom: -100%;
+    transition: all .5s linear;
+    opacity: 0;
+    border-radius: 5px;
+
+}
+.hello .pic:hover  .link{
+    bottom: 0;
+    opacity: 1;
+}
+.hello .pic .link div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: fit-content;
+    height: 30px;
+}
+
+.hello .pic .link div a i{
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+}
+
+
+ .hello .hellotxt{
+    float: right;
+    width: 50%;
+    /* background-color: #555555; */
+    height: 500px;
+    position: relative;
+    padding-top: 50px;
+}
+.hello .hellotxt .txt1 , .hello .hellotxt .info{
+    display: block;
+}
+.hello .hellotxt .txt1 h2{
+font-size: 34px;
+font-weight: 600;
+line-height: 22px;
+margin-bottom: 25px;
+padding-left: 13px;
+position: relative;
+text-transform: uppercase;
+}
+.hello .hellotxt .txt1 h2::before{
+    background: #ff305b none repeat scroll 0 0;
+content: "";
+height: 100%;
+left: 0;
+position: absolute;
+top: 0;
+width: 4px
+}
+.hello .hellotxt .txt1 p{
+    border-bottom: 1px dashed #999999;
+margin-bottom: 25px;
+padding-bottom: 25px;
+}
+ .info div span{
+color: #333333;
+font-weight: 500;
+font-weight: bold;
+}
+.info div .one{
+    float: left;
+}
+.info div .two{
+    float: right;
+    width: 200;
+    text-align: left;
+}
+.info div p{
+color: #555555;
+font-weight: 400;
+line-height: 1;
+margin-bottom: 25px;
+}
+.info div a{
+    text-decoration: none;
+    color: #555555
+}
+.info .cv {
+    float: left;
+}
+.info .cv a{
+    padding: 10px;
+    color: white;
+    background-color: #333333;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+.info .cv a:hover{
+   background-color:#EC2403 ; 
+}
+/* end hello page */
+/* start services page */
+.services{
+    background-color: #f1f1f1;
+    display: block;
+    padding: 50px 0;
+    
+}
+ .head{
+    display: block;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+}
+ .head h2{
+    text-align: center;
+    font-size: 40px;
+font-weight: 800;
+line-height: 30px;
+text-transform: capitalize;
+position: relative;
+}
+ .head h2::before{
+    position: absolute;
+    background-color: #ff305b;
+    bottom: -85%;
+    height: 2px;
+    width: 160px;
+    content: "";
+    right: 50%;
+    transform: translateX(50%);
+}
+ .head h2::after{
+    content: "";
+    position: absolute;
+    border-color: #ff305b transparent #ff305b transparent;
+    border-style: solid;
+    border-width: 1px;
+    bottom: -100%;
+    padding: 4px 0 5px;
+    width: 70px;
+    left: 46%;
+}
+.sercard {
+    display: block;
+    width: 100%;
+    padding-top: 100px;
+}
+.sercard .product{
+    float: left;
+    width:25%;
+    text-align: center;
+    padding: 20px 10px;
+}
+ .sercard .product:hover {
+    background-color: white;
+    
+}
+ .sercard .product:hover .sercard .product i {
+   transform: scale(1.5);
+}
+.sercard .product i{
+    color: #ff305b;
+    display: block;
+    font-size: 36px;
+    margin-bottom: 20px;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+ .sercard .product p{
+    color: #555555;
+padding-top: 10px;
+font-size: 16px;
+font-weight: 400;
+line-height: 25px;
+}
+@media screen and (max-width:600px) {
+    .sercard .product{
+        width: 100%;
+    }
+}
+@media screen and (min-width:601px) and (max-width:992px) {
+    .sercard .product{
+        width: 50%;
+    }
+}
+/* end services pge */
+/* start portfollio page */
+.portfolio{
+    display: block;
+    padding: 100px;
+
+}
+
+.portfolio .graphic{
+    display: block;
+    padding-top: 30px;
+    text-align: center;
+}
+.portfolio .graphic a{
+    text-decoration: none;
+    padding-right: 10px;
+
+color: #333333;
+font-size: 16px;
+font-weight: 400;
+letter-spacing: 1px;
+padding: 3px 12px;
+position: relative;
+text-transform: uppercase;
+}
+.portfolio .portcard{
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+.portfolio .portcard .outer{
+    width: 33%;
+    float: left;
+    padding: 20px;
+}
+.portfolio .portcard .outer .ineer{
+    width: 100%;
+    position: relative;
+    transition: all 1s linear;
+}
+.portfolio .portcard .outer .ineer img{
+    width: 100%;
+}
+.portfolio .portcard .outer .ineer::after{
+content: "";
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background-color: rgba(0, 0, 0, .3);
+position: absolute;
+transition: all 1s linear;
+display: none;
+
+}
+.portfolio .portcard .outer .ineer:hover:after{
+display: block;
+opacity: .5;
+transition: all 1s linear;
+}
+@media screen and (max-width:600px) {
+    .portfolio .portcard .outer{
+        width: 100%;
+    }
+}
+@media screen and (min-width:601px) and (max-width:992px) {
+    .resize{
+        width: 90%;
+    }
+    .portfolio .portcard .outer{
+        width: 50%;
+    }
+}
+/* end portfolio page */
+/* start number page */
+.num1{
+    background-color: #f1f1f1;
+    width: 100%;
+
+    
+}
+.num1 .numcard{
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+.num1 .numcard .outer{
+    width: 25%;
+    float: left;
+    padding: 20px;
+}
+.num1 .numcard .outer .ineer{
+    width: 100%;
+    text-align: center;
+  
+}
+.num1 .numcard .outer .ineer h2{
+    font-size: 26px;
+font-weight: 800;
+margin: 0 0 10px;
+font-family: 'Source Sans Pro', sans-serif;
+color: #333;
+}
+.num1 .numcard .outer .ineer p{
+    color: #555555;
+font-size: 16px;
+}
+.num1 .numcard .outer .ineer i{
+    color: #ff305b;
+font-size: 26px;
+margin-bottom: 15px;
+}
+@media screen and (max-width:600px) {
+    .num1 .numcard .outer{
+        width: 100%;
+        
+    }  
+}
+@media screen and (min-width:601px) and (max-width:992px) {
+    .num1 .numcard .outer{
+        width: 50%;
+    }
+}
+/* start feed page */
+.feedback{
+    display: block;
+    width: 100%;
+  
+    padding-block: 70px;
+}
+@media screen and (max-width:600px){
+    .feedback .container{
+        width: 90%;
+    }
+}
+.feedback .container .fecard{
+    display: block;
+    width: 75%;
+    padding: 50px;
+    padding-left: 10px;
+    background: #f1f1f1;
+    margin-inline: auto;
+    margin-block: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.feedback .container .fecard::after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    clip-path: polygon(64% 39%, 83% 50%, 50% 100%, 0% 50%);
+    background-color: #ff305b;
+    top: -50%;
+    left: -50%;
+   
+
+}
+.feedback .container .fecard .img{
+    float: left;
+    width: 30%;
+    padding-right: 5px;
+    z-index: 3;
+    position: relative;
+}
+.feedback .container .fecard .img img{
+    width: 100%;
+    border-radius: 50%;
+}
+.feedback .container .fecard .txt{
+    float: right;
+    width: 70%;
+    padding-left: 20px;
+}
+.feedback .container .fecard .txt h3{
+    font-weight: 600;
+    margin: 0 0 10px;
+      margin-bottom: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333;
+    padding-block: 20px;
+}
+.feedback .container .fecard .txt h4 a{
+    color: #777777;
+font-size: 15px;
+text-decoration: none;
+padding-block: 20px;
+}
+.feedback .container .fecard .txt p{
+    font-size: 16px;
+font-style: italic;
+margin: 0 0 15px;
+padding-block: 20px;
+}
+.feedback .container .fecard .txt i{
+    color: #f1c30d;
+}
+
+/* end feed page */
+ /* start blog page */
+.blog{
+    background: #f1f1f1;
+    display: block;
+    padding-bottom: 40px;
+    
+}
+.blog .blgcont{
+    display: block;
+}
+.blog .blgcont .blg1 {
+float: left;
+width: 33.333%;
+padding: 20px;
+
+}
+.blog .blgcont .blg1 iframe{
+    width: 100%;
+    height: 210px;
+}
+@media screen and (min-width:769px) and (max-width:1200px){
+    .blog .blgcont .blg1 h2{
+     font-size: 14px;
+    } 
+}
+@media screen and (max-width:768px){
+    .blog .blgcont .blg1 {
+       display: block;
+        width:100%
+        
+        }
+}
+.blog .blgcont .blg1 .ineer{
+    width: 100%;
+    background-color: white;
+    padding-bottom: 20px;
+}
+.blog .blgcont .blg1 .ineer img{
+    width: 100%;
+}
+.blog .blgcont .blg1 .ineer a{
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+}
+.blog .blgcont .blg1 .ineer p{
+   color: #555555;
+   padding: 10px 10px;
+}
+.blog .blgcont .blg1 .ineer h2 {
+    padding: 10px 0;
+    text-transform: capitalize;
+    color: black;
+}
+/* end blog page */
+
+/* start form page */
+.contact .form{
+    display: block;
+    width: 100%;
+    padding: 100px 120px;
+}
+.name__email{
+    width: 100%;
+    display: block;
+   
+}
+.name__email .name{
+    float: left;
+    width: 55%;
+}
+.name__email .name p{
+    padding-top: 10px;
+    color: #a94442;
+}
+.name__email .name input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    padding-left: 5px;
+
+}
+.name__email .email{
+    float: right;
+    width: 40%;
+}
+.name__email .email p{
+    padding-top: 10px;
+    color: #a94442;
+}
+.name__email .email input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    padding-left: 5px;
+
+}
+.form .subject{
+    width: 100%;
+    padding: 10px 0;
+}
+.form .subject input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    padding-left: 5px;
+
+}
+.form .subject p{
+    padding-top: 10px;
+    color: #a94442;
+}
+.form .message{
+    width: 100%;
+    padding-bottom: 20px;
+
+}
+.form .message textarea{
+width: 100%;
+outline: none;
+padding: 10px;
+color: #999;
+ border-radius: 3px;
+
+}
+.form .message p{
+    color: #a94442;
+    padding-top: 10px; 
+}
+.form input{
+    color: #999;
+    border:  1px solid #999;
+    border-radius: 3px;
+}
+.form button{
+
+padding: 0 20px;
+height: 40px;
+line-height: 38px;
+border-radius: 3px;
+text-transform: uppercase;
+background-color: teal;
+border-color: transparent;
+color: #ffffff;
+transition: all 1s linear;
+}
+.form button:hover{
+    background-color: #EC2403; 
+}
+.form .name , .form .email , .form .subject , .form .message{
+    padding-bottom: 20px;
+}
+@media screen and (max-width:768px) {
+    .form .name , .form .email{
+        display: block;
+        width: 100%;
+    }
+    .contact .container{
+        width: 90%;
+    }
+    .container .form{
+        padding: 100px 50px;
+    }
+    
+}
+@media screen and (min-width:769px) and (max-width:929px){
+    .container .form{
+        padding: 100px 50px;
+    }
+}
+/* start footer page */
+.footer{
+    display: block;
+    width: 100%;
+    background-color: #333333;
+    padding-block:50px ;
+    text-align: center;
+}
+.footer a{
+    color: white;
+    padding: 10px;
+}
+.footer p{
+   color: #ffffff;
+   padding-block: 20px;
+}
+.footer p a{
+    color: #ff305b;
+    text-decoration: none;
+    
+}
+/* end footer page */
+
+
+
+
+
+
